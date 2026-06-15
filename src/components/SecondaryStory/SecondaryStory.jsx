@@ -21,6 +21,17 @@ const Wrapper = styled.article`
   gap: 4px 16px;
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
+	background-image: linear-gradient(to right, var(--color-gray-300), var(--color-gray-300));
+	background-repeat: no-repeat;
+	background-size: 90% 1px;
+	padding-bottom: 10px;
+	background-position: bottom center;
+	margin-bottom: 10px;
+  a:last-of-type & {
+    background-image: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 `;
 
 const Image = styled.img`

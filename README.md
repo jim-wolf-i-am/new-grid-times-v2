@@ -1,5 +1,8 @@
 # New Grid Times — Module 7 workshop
 
+Figma Design
+https://www.figma.com/file/BDdNhCeVLye5mFHHxQhkgE/New-Grid-Times
+
 In this workshop, our goal is to build a sophisticated, responsive grid layout for an online newspaper, the New Grid Times:
 
 ![Desktop-sized mockup](/docs/desktop-mockup.png)
