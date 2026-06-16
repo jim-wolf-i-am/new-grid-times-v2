@@ -55,7 +55,19 @@ const Heading = styled.h2`
 const Abstract = styled.p`
   grid-area: abstract;
   font-size: 1rem;
-  white-space: pre-wrap;
+    white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+      /* -webkit-line-clamp: 16; */
+  }
+  @media screen and (min-width: 1024px) {
+      -webkit-line-clamp: 3;
+      align-self: start;
+  }
+
 `;
 
 export default SecondaryStory;

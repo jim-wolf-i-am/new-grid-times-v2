@@ -51,6 +51,9 @@ const Abstract = styled.p`
   @media screen and (min-width: 768px) {
       -webkit-line-clamp: 16;
   }
+  @media screen and (min-width: 1024px) {
+      -webkit-line-clamp: 7;
+  }
 `;
 
 const Location = styled.span`

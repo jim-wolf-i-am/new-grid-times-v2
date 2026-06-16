@@ -53,6 +53,16 @@ const Wrapper = styled.div`
     'advertisement';
   gap: 48px;
   margin-bottom: 48px;
+  @media screen and (min-width: 1024px){
+    grid-template-columns: 6fr 4fr 2fr;
+      grid-template-areas:
+    'main-story secondary-stories opinion-stories'
+    'main-story secondary-stories opinion-stories'
+    'main-story secondary-stories opinion-stories'
+    'main-story advertisement advertisement'
+    ;
+
+  }
 `;
 
 const MainStorySection = styled.section`

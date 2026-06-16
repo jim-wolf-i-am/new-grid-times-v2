@@ -17,6 +17,24 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, var(--color-gray-300), var(--color-gray-300));
+	background-repeat: no-repeat;
+	background-size: 100% 1px;
+	padding-bottom: 10px;
+	background-position: bottom center;
+	margin-bottom: 16px;
+  a:last-of-type & {
+    background-image: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  @media screen and (min-width: 744px) and (max-width: 1023px) {
+    display: unset;
+    background: none;
+  }
 `;
 
 const Avatar = styled.img`
