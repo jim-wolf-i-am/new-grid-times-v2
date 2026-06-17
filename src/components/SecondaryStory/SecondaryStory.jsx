@@ -61,6 +61,9 @@ const Heading = styled.h2`
   line-height: 1.3;
   /* Optical alignment */
   margin-top: -2px;
+  @media screen and ${QUERIES.tabletOnly} {
+    margin-top: 10px;
+  }
 `;
 
 const Abstract = styled.p`
