@@ -34,7 +34,7 @@ const MainStoryGrid = () => {
         <SectionTitle>Opinion</SectionTitle>
         <OpinionStoryList>
           {OPINION_STORIES.map((story, index) => (
-            <OpinionStory key={story.id} {...story} />
+            <OpinionStory style={{ flex: 1 }} key={story.id} {...story} />
           ))}
         </OpinionStoryList>
       </OpinionSection>
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
     'advertisement';
   gap: 48px;
   margin-bottom: 48px;
-  @media screen and ${QUERIES.tabletOnly}{
+  @media screen and ${QUERIES.tabletAndUp}{
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
     'main-story secondary-stories'
@@ -64,7 +64,9 @@ const Wrapper = styled.div`
     'advertisement advertisement'
     'opinion-stories opinion-stories'
     ;
-    gap: 32px;
+    /* background-color: var(--color-gray-300);
+    padding: 0 24px; */
+    gap: 16px;
   }
   @media screen and (${QUERIES.laptopAndUp}){
     grid-template-columns: 6fr 4fr 3fr;
@@ -79,10 +81,18 @@ const Wrapper = styled.div`
 
 const MainStorySection = styled.section`
   grid-area: main-story;
+  @media screen and (${QUERIES.tabletAndUp}){
+    border-right: 1px solid var(--color-gray-300);
+    padding-right: 16px;
+  }
 `;
 
 const SecondaryStorySection = styled.section`
   grid-area: secondary-stories;
+  @media screen and (${QUERIES.tabletAndUp}){
+    border-right: 1px solid var(--color-gray-300);
+    padding-right: 16px;
+  }
 `;
 
 const StoryList = styled.div`

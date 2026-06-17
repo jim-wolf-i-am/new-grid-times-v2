@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import { QUERIES } from '../../constants';
 
-const OpinionStory = ({ id, title, author, avatar }) => {
+const OpinionStory = ({ id, title, author, avatar, style }) => {
   return (
-    <a href={`/story/${id}`}>
+    <a style={style} href={`/story/${id}`}>
       <Wrapper>
         <Avatar alt="" src={avatar} />
         <div>
