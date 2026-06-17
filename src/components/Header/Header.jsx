@@ -56,7 +56,7 @@ const SuperHeader = styled.div`
   padding: 16px 0;
   background: var(--color-gray-900);
   color: white;
-  @media screen and (min-width: 1280px) {
+  @media screen and (${QUERIES.laptopAndUp}) {
     display: none;
   }
 `;
@@ -69,7 +69,7 @@ const Row = styled(MaxWidthWrapper)`
 const ActionGroup = styled.div`
     display: flex;
     gap: 24px;
-  @media screen and (min-width: 1280px) {
+  @media screen and (${QUERIES.laptopAndUp}) {
     display: flex;
     gap: 24px;
   }
@@ -85,7 +85,7 @@ const ActionGroup = styled.div`
 
 const ActionGroupDesktop = styled.div`
     display: none;
-  @media screen and (min-width: 1280px) {
+  @media screen and (${QUERIES.laptopAndUp}) {
     display: flex;
     gap: 24px;
   }
@@ -101,7 +101,7 @@ const ActionGroupDesktop = styled.div`
 
 const SubscribeGroup = styled.div`
   display: none;
-  @media screen and (min-width: 1280px) {
+  @media screen and (${QUERIES.laptopAndUp}) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +135,7 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
-  @media screen and (min-width: 1280px) {
+  @media screen and (${QUERIES.laptopAndUp}) {
     justify-content: space-between;
   }
 `;

@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { QUERIES } from '../../constants';
+
+
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
     <a href={`/story/${id}`}>
@@ -23,15 +26,23 @@ const Wrapper = styled.article`
   color: var(--color-gray-900);
 	background-image: linear-gradient(to right, var(--color-gray-300), var(--color-gray-300));
 	background-repeat: no-repeat;
-	background-size: 90% 1px;
-	padding-bottom: 10px;
+	background-size: 100% 1px;
 	background-position: bottom center;
-	margin-bottom: 10px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
   a:last-of-type & {
     background-image: none;
     margin-bottom: 0;
     padding-bottom: 0;
   }
+  @media screen and ${QUERIES.tabletOnly}{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'image'
+      'heading'
+      'abstract';
+  	margin-bottom: 20px;
+    }
 `;
 
 const Image = styled.img`
@@ -58,12 +69,12 @@ const Abstract = styled.p`
     white-space: pre-wrap;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 3;
   overflow: hidden;
-  @media screen and (min-width: 768px) {
+  @media screen and ${QUERIES.tabletAndUp} {
       /* -webkit-line-clamp: 16; */
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and ${QUERIES.laptopAndUp} {
       -webkit-line-clamp: 3;
       align-self: start;
   }

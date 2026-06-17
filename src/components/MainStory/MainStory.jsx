@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { QUERIES } from '../../constants';
 
 const MainStory = ({
   id,
@@ -48,10 +49,10 @@ const Abstract = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
   overflow: hidden;
-  @media screen and (min-width: 768px) {
+  @media screen and ${QUERIES.tabletAndUp} {
       -webkit-line-clamp: 16;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and ${QUERIES.laptopAndUp} {
       -webkit-line-clamp: 7;
   }
 `;

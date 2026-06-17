@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import format from 'date-fns/format';
 
+import { QUERIES } from '../../constants';
+
 const Logo = (props) => {
   return (
     <Wrapper>
@@ -22,7 +24,7 @@ const Wrapper = styled.div`
 const Link = styled.a`
   font-family: var(--font-family-logo);
   font-size: 3rem;
-  @media screen and (min-width: 1280px) {
+    @media screen and (${QUERIES.laptopAndUp}) {
     font-size: 4.5rem;
   }
 
