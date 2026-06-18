@@ -89,10 +89,6 @@ const MainStorySection = styled.section`
 
 const SecondaryStorySection = styled.section`
   grid-area: secondary-stories;
-  @media screen and (${QUERIES.tabletAndUp}){
-    border-right: 1px solid var(--color-gray-300);
-    padding-right: 16px;
-  }
 `;
 
 const StoryList = styled.div`
