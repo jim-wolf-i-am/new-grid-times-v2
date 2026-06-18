@@ -49,9 +49,18 @@ const Wrapper = styled.div`
   display: grid;
   gap: 48px;
   grid-template-columns: repeat(auto-fill, minmax(min(810px, 100%), 1fr));
+  @media screen and ${QUERIES.laptopAndUp} {
+    grid-template-columns: repeat(2, 50%);
+    overflow: clip;
+    gap: 0;
+  }
 `;
 
-const MarketsSection = styled.section``;
+const MarketsSection = styled.section`
+@media screen and ${QUERIES.laptopAndUp}{
+  padding-right: 24px;
+}
+`;
 
 const MarketCards = styled.div`
   display: grid;
@@ -59,16 +68,22 @@ const MarketCards = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
 `;
 
-const SportsSection = styled.section``;
+const SportsSection = styled.section`
+@media screen and ${QUERIES.laptopAndUp}{
+  padding-left: 24px;
+  border-left: 1px solid var(--color-gray-300);
+}
+`;
 
 const SportsStories = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
-  @media screen and ${QUERIES.tabletOnly} {
+  @media screen and ${QUERIES.tabletAndUp} {
     display: flex;
     white-space: nowrap;
     overflow: auto;
+    padding-bottom: 10px;
     a{
       white-space: wrap;
     }
